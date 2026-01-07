@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background: #191919;
+  color: #eee;
+}
+/* ヘッダーまわり全体 */
+header {
+  background: #232323;
+  color: #fff;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 20px #0006;
+  position: relative;
+}
+
+/* 名前＋アイコン横並び */
+.profile-row {
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+.profile-icon {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 3px solid #444;
+  background: #232323;
+  object-fit: cover;
+  box-shadow: 0 0 0 6px #191919;
+}
+.header-slider {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  aspect-ratio: 16 / 9;
+  margin-left: -50vw;
+  left: 50%;
+  overflow: hidden;
+  background: #191919;
+  border-radius: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.header-slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(.77,0,.18,1);
+  z-index: 1;
+  border-radius: 0;
+}
+.header-slider img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* タイトル重ねて真ん中・大きめ白文字＋ぼかし影 */
+.slider-title {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: bold;
+  text-shadow: 0 4px 28px #000a, 0 1px 1px #222, 0 0 2px #000;
+  letter-spacing: 0.07em;
+  white-space: pre-line;
+  text-align: center;
+  padding: 0 2vw;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* スライダー左右クリックエリア */
+.slider-area {
+  position: absolute;
+  top: 0; height: 100%; width: 20vw; min-width: 70px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.15s;
+}
+.slider-area.prev { left: 0; }
+.slider-area.next { right: 0; }
+.slider-area:hover {
+  background: rgba(128,128,128,0.07);
+}
+
+/* レスポンシブ */
+@media (max-width: 600px) {
+  .header-slider {
+    aspect-ratio: 2.4 / 1;
+  }
+  .slider-title {
+    font-size: clamp(1.1rem, 6vw, 2.2rem);
+    padding: 2vw;
+  }
+  .slider-area {
+    min-width: 40px; width: 17vw;
+  }
+  .gallery-container img {
+    height: 38vw;
+  }
+}
+
+
+/* ナビ等はお好みで調整 */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover {
+  background: #444;
+  color: #fff;
+}
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+h2 {
+  border-left: 5px solid #888;
+  padding-left: 12px;
+  margin-top: 38px;
+  color: #fafafa;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px #0008;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-container img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* 横長画像は2カラムぶち抜く */
+.gallery-container img.wide {
+  grid-column: span 2;
+  height: 220px; /* 横にばーんと並ぶから高さはちょい控え目可愛く */
+  object-fit: cover;
+}
+
+/* 縦長画像はデフォで。1カラムに2枚並ぶ */
+.gallery-container img.tall {
+  /* ここに特に何も追加しなくてOK！
+     grid設定のまま自動的に2列になるよ */
+}
+.gallery-container img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
+  border-color: #fff;
+  filter: grayscale(0%);
+}
+section {
+  margin-bottom: 40px;
+}
+#about, #contact {
+  background: #232323bb;
+  border-radius: 14px;
+  padding: 18px 20px 10px 15px;
+  box-shadow: 0 4px 18px #1116;
+}
+#about p, #contact p, #contact ul {
+  color: #c9c9c9;
+  font-size: 1.08em;
+}
+#contact a {
+  color: #bbb;
+  text-decoration: underline;
+  transition: color 0.2s, background 0.2s;
+}
+#contact a:hover {
+  color: #fff;
+  background: #4448;
+  padding: 2px 5px;
+  border-radius: 7px;
+}
+footer {
+  background: #232323;
+  color: #ccc;
+  text-align: center;
+  padding: 22px 0 12px 0;
+  border-radius: 0 0 24px 24px;
+  margin-top: 60px;
+  letter-spacing: 1px;
+}
