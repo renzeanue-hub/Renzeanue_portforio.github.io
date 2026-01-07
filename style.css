@@ -96,7 +96,7 @@ header {
 
 .social-links {
   display: flex;
-  gap: 20px; /* アイコン同士の間隔 */
+  gap: 30px; /* アイコン同士の間隔 */
 }
 
 .social-link {
