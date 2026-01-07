@@ -4,21 +4,19 @@
   <meta charset="UTF-8">
   <title>Renzeanue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- ↓↓↓ base を先に書く！ ↓↓↓ -->
   <base href="/Renzeanue_portforio.github.io/">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
 <!-- スライダー部分 -->
   <div class="header-slider">
     <div class="slider-area prev"></div>
-    <!-- <img src="https://placehold.co/1600x900?text=ヘッダー1" alt="ヘッダー1" class="slider-img active"> -->
-    <!-- <img src="https://placehold.co/1600x900?text=ヘッダー2" alt="ヘッダー2" class="slider-img"> -->
-    <!-- <img src="https://placehold.co/1600x900?text=ヘッダー3" alt="ヘッダー3" class="slider-img"> -->
-	<img src="images/Chino_prince.png" alt="ヘッダー4" class="slider-img">
-	<img src="images/VALIS_Summer.jpg" alt="ヘッダー5" class="slider-img">
-	<img src="images/VALIS_flowers.jpg" alt="ヘッダー6" class="slider-img">
+    <img src="images/Chino_prince.png" alt="ヘッダー4" class="slider-img active">
+    <img src="images/VALIS_Summer.jpg" alt="ヘッダー5" class="slider-img">
+    <img src="images/VALIS_flowers.jpg" alt="ヘッダー6" class="slider-img">
     <div class="slider-area next"></div>
   </div>
 <!-- 名前＆アイコン横並び -->
@@ -42,14 +40,14 @@
     <section id="about">
       <h2>Profile</h2>
       <p>イラストレーター</p>
-	  <p>得意は1枚絵です</p>
+      <p>得意は1枚絵です</p>
     </section>
     <section id="contact">
       <h2>Contact</h2>
       <p>X:</p>
-	  <p>Pixiv:</p>
-	  <p>Instagram:</p>
-	  <p>YouTube:</p>
+      <p>Pixiv:</p>
+      <p>Instagram:</p>
+      <p>YouTube:</p>
       <ul>
         <li>Twitter: <a href="#">@yourusername</a></li>
         <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
@@ -57,40 +55,34 @@
     </section>
   </main>
   <footer>
-    <p>&copy; Iustration Portfolio</p>
+    <p>&copy; Illustration Portfolio</p>
   </footer>
-    <!-- ▼必ずbodyの最後で読み込む！！ -->
-  <!-- <script src="gallery-sizing.js"></script> -->
   <script>
-	const imgs = document.querySelectorAll('.header-slider .slider-img');
-	const prevBtn = document.querySelector('.header-slider .slider-area.prev');
-	const nextBtn = document.querySelector('.header-slider .slider-area.next');
-	let now = 0, timer;
-
-	function show(idx) {
-	  imgs[now].classList.remove('active');
-	  now = (idx + imgs.length) % imgs.length;
-	  imgs[now].classList.add('active');
-	}
-
-	prevBtn.addEventListener('click', (e) => {
-	  show(now - 1);
-	  resetTimer();
-	});
-	nextBtn.addEventListener('click', (e) => {
-	  show(now + 1);
-	  resetTimer();
-	});
-
-	function autoSlide() {
-	  show(now + 1);
-	}
-	function resetTimer() {
-	  clearInterval(timer);
-	  timer = setInterval(autoSlide, 3500);
-	}
-
-	timer = setInterval(autoSlide, 3500);
-</script>
+    const imgs = document.querySelectorAll('.header-slider .slider-img');
+    const prevBtn = document.querySelector('.header-slider .slider-area.prev');
+    const nextBtn = document.querySelector('.header-slider .slider-area.next');
+    let now = 0, timer;
+    function show(idx) {
+      imgs[now].classList.remove('active');
+      now = (idx + imgs.length) % imgs.length;
+      imgs[now].classList.add('active');
+    }
+    prevBtn.addEventListener('click', (e) => {
+      show(now - 1);
+      resetTimer();
+    });
+    nextBtn.addEventListener('click', (e) => {
+      show(now + 1);
+      resetTimer();
+    });
+    function autoSlide() {
+      show(now + 1);
+    }
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(autoSlide, 3500);
+    }
+    timer = setInterval(autoSlide, 3500);
+  </script>
 </body>
 </html>
