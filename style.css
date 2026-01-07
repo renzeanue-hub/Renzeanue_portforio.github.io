@@ -94,6 +94,20 @@ header {
   background: rgba(128,128,128,0.07);
 }
 
+.social-links {
+  display: flex;
+  gap: 20px; /* アイコン同士の間隔 */
+}
+
+.social-link {
+  color: white;
+  transition: transform 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.2); /* ホバーで大きく */
+}
+
 /* レスポンシブ */
 @media (max-width: 600px) {
   .header-slider {
@@ -166,7 +180,6 @@ h2 {
 /* 横長画像は2カラムぶち抜く */
 .gallery-container img.wide {
   grid-column: span 2;
-  height: 220px; /* 横にばーんと並ぶから高さはちょい控え目可愛く */
   object-fit: cover;
 }
 
