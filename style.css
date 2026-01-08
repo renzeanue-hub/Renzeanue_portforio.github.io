@@ -278,7 +278,7 @@ h2 {
   left: 0; /* 左端に配置 */
   right: 0; /* 右端に配置 */
   top: 100%; /* 画像の下に配置 */
-  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); /* グラデーション背景 */
+    /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); グラデーション背景 */
   color: #fff;
   font-size: 1em;
   padding: 12px 8px;
@@ -288,6 +288,7 @@ h2 {
   border-radius: 0 0 12px 12px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
+  z-index: 5;
   }
 
 
