@@ -290,6 +290,7 @@ h2 {
   white-space: nowrap;
 }
 
+
 .gallery-item:hover .gallery-title {
   opacity: 1;
 }
