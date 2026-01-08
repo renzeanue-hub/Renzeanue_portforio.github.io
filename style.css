@@ -212,14 +212,6 @@ h2 {
 /* =====================
    ギャラリー
 ===================== */
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-  justify-content: flex-start;  /* 左揃え！ */
-}
 
 .gallery-tabs {
   display: flex;
@@ -244,43 +236,64 @@ h2 {
   transform: translateY(-2px) scale(1.06);
   box-shadow: 0 4px 16px #ec407a44;
 }
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2.5vw, 20px); /* 最小12px、最大20px、基本2.5vw */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: flex-start;  /* 左揃え！ */
+}
+
+/* ギャラリーアイテム */
 .gallery-item {
-  width: calc(50% - 10px);      /* 2列ぶん、gap考慮で調整 */
-  margin-bottom: 20px;       
-  display: block;          
+  width: calc(50% - clamp(6px, 1.25vw, 10px)); /* gap の半分 */
+  display: block;
   position: relative;
   transition: 
     transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     padding-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  padding-bottom: 0;               /* 初期値 */
+  padding-bottom: 0;
   z-index: 20;
-  box-sizing: border-box;          /* これ大事！幅の計算合わせ */
+  box-sizing: border-box;
 }
+
 .gallery-item[hidden] {
   display: none !important;
 }
 
-.gallery-container img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-  object-fit: cover;
-  transition: box-shadow 0.3s;
-}
+/* 画像 */
 .gallery-item img {
   width: 100%;
   display: block;
   border-radius: 12px;
+  object-fit: cover;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
-
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
   padding-bottom: 60px;
 }
 
 .gallery-item:hover img {
-  box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
+
+/* スマホは1列 */
+@media (max-width: 600px) {
+  .gallery-item {
+    width: 100%;
+  }
+  
+  .gallery-container {
+    gap: clamp(10px, 3vw, 15px);
+  }
+}
+
+
 
 /* wide画像のspanはgrid用なのでflexでは無効、削除してOK */
 .gallery-title {
