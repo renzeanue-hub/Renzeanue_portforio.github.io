@@ -248,6 +248,7 @@ h2 {
   display: block;
   position: relative;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 20;
 }
 .gallery-item[hidden] {
   display: none !important;
@@ -288,7 +289,7 @@ h2 {
   border-radius: 0 0 12px 12px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
-  z-index: 10;
+  z-index: 30;
   }
 
 
