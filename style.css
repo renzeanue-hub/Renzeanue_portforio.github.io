@@ -218,8 +218,13 @@ h2 {
   /* grid-template-columns: repeat(2, 1fr);
   max-width: 1000px;
   margin: 0 auto; */
-  column-count: 2;         /* 2列にする！ */
-  column-gap: 20px;        /* 列のすきま */
+  /* column-count: 2;         2列にする！ */
+  /* column-gap: 20px;        列のすきま */
+
+  display: flex;
+  flex-wrap: wrap;         /* 折り返して2列目以降へ */
+  gap: 20px;               /* すきま */
+  justify-content: center;
 }
 
 .gallery-tabs {
@@ -246,7 +251,8 @@ h2 {
   box-shadow: 0 4px 16px #ec407a44;
 }
 .gallery-item {
-  break-inside: avoid;     /* カード途中で途切れない */
+  /* break-inside: avoid;     カード途中で途切れない */
+  width: calc(50% - 20px); /* 2列なら width: 50% - gapぶん */
   margin-bottom: 20px;
   display: block;          /* 念のため */
   position: relative;
