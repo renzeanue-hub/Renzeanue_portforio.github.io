@@ -209,7 +209,6 @@ h2 {
   letter-spacing: 1px;
   text-shadow: 0 2px 10px #0008;
 }
-
 /* =====================
    ギャラリー
 ===================== */
@@ -218,13 +217,8 @@ h2 {
   /* grid-template-columns: repeat(2, 1fr);
   max-width: 1000px;
   margin: 0 auto; */
-  /* column-count: 2;         2列にする！ */
-  /* column-gap: 20px;        列のすきま */
-
-  display: flex;
-  flex-wrap: wrap;         /* 折り返して2列目以降へ */
-  gap: 20px;               /* すきま */
-  justify-content: center;
+  column-count: 2;         /* 2列にする！ */
+  column-gap: 20px;        /* 列のすきま */
 }
 
 .gallery-tabs {
@@ -251,9 +245,8 @@ h2 {
   box-shadow: 0 4px 16px #ec407a44;
 }
 .gallery-item {
-  /* break-inside: avoid;     カード途中で途切れない */
-  width: calc(50% - 20px); /* 2列なら width: 50% - gapぶん */
-  margin-bottom: 20px;
+  break-inside: avoid;     /* カード途中で途切れない */
+  margin-bottom: 40px;     /* 帯ぶん＆hover拡大にも余裕！ */
   display: block;          /* 念のため */
   position: relative;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -288,30 +281,34 @@ h2 {
   grid-column: span 2;
 }
 
+/* ==== ここから帯まわり書き換え・追記 ==== */
 .gallery-title {
-  position: absolute; /* ギャラリー画像のタイトル重ね */
-  left: 0; /* 左端に配置 */
-  right: 0; /* 右端に配置 */
-  top:90%; /* 画像の下に配置 */
-    /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); グラデーション背景 */
+  position: absolute;      /* 画像の上に重ねて固定 */
+  left: 0;
+  right: 0;
+  bottom: 10px;            /* 画像の下端から10px上に帯出す */
+  /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); */
+  background: rgba(0,0,0,0.7); /* 視認性シンプル帯 */
   color: #fff;
   font-size: 1em;
   padding: 12px 8px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background 0.3s, color 0.3s;
   border-radius: 0 0 12px 12px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
-  white-space: nowrap;
+  white-space: normal;     /* 長いタイトルも対応 */
   z-index: 30;
-  }
-
+  pointer-events: none;    /* hoverスルー。必要なら外してOK */
+}
 
 .gallery-item:hover .gallery-title {
   opacity: 1;
-  transform: scale(1.08) rotate(-1deg); /* ← これ足すだけ！ */
+  background: linear-gradient(to top, #ec407a, rgba(0,0,0,0.2));
+  color: #fff;
+  transform: scale(1.08) rotate(-1deg);
 }
-
 
 /* =====================
    About & Contact
