@@ -209,17 +209,16 @@ h2 {
   letter-spacing: 1px;
   text-shadow: 0 2px 10px #0008;
 }
-
 /* =====================
    ギャラリー
 ===================== */
 .gallery-container {
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   max-width: 1000px;
-  margin: 0 auto; */
-  column-count: 2;         /* 2列にする！ */
-  column-gap: 20px;        /* 列のすきま */
+  margin: 0 auto;
+  justify-content: flex-start;  /* 左揃え！ */
 }
 
 .gallery-tabs {
@@ -246,14 +245,16 @@ h2 {
   box-shadow: 0 4px 16px #ec407a44;
 }
 .gallery-item {
-  break-inside: avoid;     /* カード途中で途切れない */
-  margin-bottom: 20px;
-  display: block;          /* 念のため */
+  width: calc(50% - 10px);      /* 2列ぶん、gap考慮で調整 */
+  margin-bottom: 20px;       
+  display: block;          
   position: relative;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-   /* ここ追加↓ */
-  padding-bottom: 0;
+  transition: 
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    padding-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding-bottom: 0;               /* 初期値 */
   z-index: 20;
+  box-sizing: border-box;          /* これ大事！幅の計算合わせ */
 }
 .gallery-item[hidden] {
   display: none !important;
@@ -281,16 +282,14 @@ h2 {
   box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
 }
 
-.gallery-container img.wide {
-  grid-column: span 2;
-}
+/* wide画像のspanはgrid用なのでflexでは無効、削除してOK */
 
 .gallery-title {
-  position: absolute; /* ギャラリー画像のタイトル重ね */
-  left: 0; /* 左端に配置 */
-  right: 0; /* 右端に配置 */
-  bottom:0; /* 画像の下に配置 */
-    /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); グラデーション背景 */
+  position: absolute; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); */
   color: #fff;
   font-size: 1em;
   padding: 12px 8px;
@@ -301,14 +300,12 @@ h2 {
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
   z-index: 30;
-  }
-
+}
 
 .gallery-item:hover .gallery-title {
   opacity: 1;
-  transform: scale(1.08) rotate(-1deg); /* ← これ足すだけ！ */
+  transform: scale(1.08) rotate(-1deg);
 }
-
 
 /* =====================
    About & Contact
