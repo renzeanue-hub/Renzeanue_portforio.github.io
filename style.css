@@ -288,7 +288,7 @@ h2 {
   border-radius: 0 0 12px 12px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   white-space: nowrap;
-  z-index: 5;
+  z-index: 10;
   }
 
 
