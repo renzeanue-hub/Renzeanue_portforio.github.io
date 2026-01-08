@@ -240,7 +240,7 @@ h2 {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(12px, 2.5vw, 20px); /* 最小12px、最大20px、基本2.5vw */
+  gap: clamp(6px, 2.5vw, 20px); /* 最小12px、最大20px、基本2.5vw */
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
@@ -249,7 +249,7 @@ h2 {
 
 /* ギャラリーアイテム */
 .gallery-item {
-  width: calc(50% - clamp(6px, 1.25vw, 10px)); /* gap の半分 */
+  width: calc(50% - clamp(3px, 1.25vw, 10px)); /* gap の半分 */
   display: block;
   position: relative;
   transition: 
