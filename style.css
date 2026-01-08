@@ -13,7 +13,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  /* font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; */
+  font-family: "Noto Sans JP", sans-serif;
   background: #191919;
   color: #eee;
 }
@@ -234,7 +235,7 @@ h2 {
   border-radius: 8px 8px 0 0;
   font-size: 1em;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
   outline: none;
 }
 .gallery-tab.active, .gallery-tab:hover {
@@ -256,10 +257,10 @@ h2 {
   border-radius: 12px;
   display: block;
   object-fit: cover;
-  transition: all 0.3s;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
 }
 
-.gallery-container img:hover {
+.gallery-item:hover img {
   transform: scale(1.08) rotate(-1deg);
   box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
 }
@@ -268,23 +269,20 @@ h2 {
   grid-column: span 2;
 }
 
-.gallery-item {
-  position: relative;
-}
-
 .gallery-title {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(30,30,30,0.7);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(30,30,30,0.5));
   color: #fff;
   font-size: 1em;
-  padding: 8px 0;
+  padding: 12px 8px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 0 0 12px 12px;
+  backdrop-filter: blur(4px);
 }
 
 .gallery-item:hover .gallery-title {
