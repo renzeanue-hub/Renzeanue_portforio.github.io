@@ -286,7 +286,7 @@ h2 {
   position: absolute; /* ギャラリー画像のタイトル重ね */
   left: 0; /* 左端に配置 */
   right: 0; /* 右端に配置 */
-  bottom: 20px; /* 画像の下に配置 */
+  bottom: 5px; /* 画像の下に配置 */
     /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); グラデーション背景 */
   color: #fff;
   font-size: 1em;
