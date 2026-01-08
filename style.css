@@ -247,6 +247,7 @@ h2 {
 .gallery-item {
   display: block;
   position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .gallery-item[hidden] {
   display: none !important;
@@ -257,11 +258,14 @@ h2 {
   border-radius: 12px;
   display: block;
   object-fit: cover;
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.08) rotate(-1deg);
 }
 
 .gallery-item:hover img {
-  transform: scale(1.08) rotate(-1deg);
   box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
 }
 
@@ -273,8 +277,8 @@ h2 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(30,30,30,0.5));
+  top: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4));
   color: #fff;
   font-size: 1em;
   padding: 12px 8px;
@@ -282,7 +286,8 @@ h2 {
   opacity: 0;
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 0 0 12px 12px;
-  backdrop-filter: blur(4px);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
 }
 
 .gallery-item:hover .gallery-title {
