@@ -283,7 +283,6 @@ h2 {
 }
 
 /* wide画像のspanはgrid用なのでflexでは無効、削除してOK */
-
 .gallery-title {
   position: absolute; 
   left: 0;
@@ -296,32 +295,23 @@ h2 {
   opacity: 0;
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
-  white-space: nowrap;
+  white-space: normal;   /* 折り返しOK（nowrapだと小さいと切れる） */
   z-index: 30;
 }
-.gallery-description {
+
+.gallery-title .gallery-description {
   font-size: 0.7em;
   color: #fff;
-  padding: 12px 8px;
-  text-align: center;
-  opacity: 0;
-  margin-top: 0.1em;
-  /* letter-spacing: 0.1em; */
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+  margin-top: 0.2em;
+  opacity: 1;            /* 親のopacityに包まれるので単体では不要 */
   text-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
-  white-space: nowrap;
-  z-index: 30;
 }
 
+/* hoverでまとめて帯を出す */
 .gallery-item:hover .gallery-title {
   opacity: 1;
-  transform: scale(1.08) rotate(-1deg);
 }
-.gallery-item:hover .gallery-description {
-  opacity: 1;
-  transform: scale(1.08) rotate(-1deg);
-}
-
 
 /* =====================
    About & Contact
