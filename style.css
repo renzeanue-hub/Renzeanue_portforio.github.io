@@ -274,7 +274,7 @@ h2 {
 
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-  padding-bottom: 44px;
+  padding-bottom: 60px;
 }
 
 .gallery-item:hover img {
@@ -289,7 +289,7 @@ h2 {
   position: absolute; /* ギャラリー画像のタイトル重ね */
   left: 0; /* 左端に配置 */
   right: 0; /* 右端に配置 */
-  top:80%; /* 画像の下に配置 */
+  bottom:0; /* 画像の下に配置 */
     /* background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.4)); グラデーション背景 */
   color: #fff;
   font-size: 1em;
