@@ -301,11 +301,24 @@ h2 {
   white-space: nowrap;
   z-index: 30;
 }
+.gallery-description {
+  text-align: center;
+  font-size: 0.7em;
+  color: #fff;
+  margin-top: 0.1em;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
 .gallery-item:hover .gallery-title {
   opacity: 1;
   transform: scale(1.08) rotate(-1deg);
 }
+.gallery-item:hover .gallery-description {
+  opacity: 1;
+  transform: scale(1.08) rotate(-1deg);
+}
+
 
 /* =====================
    About & Contact
