@@ -85,8 +85,12 @@ header {
   text-align: center;
   font-size: 0.9em;
   color: #aaa;
-  margin-top: 4px;
+  margin-top: 0.1em;
   letter-spacing: 0.1em;
+}
+
+.profile-row h1 {
+  margin-bottom: 0.1em;
 }
 
 /* 名前＋アイコン横並び */
