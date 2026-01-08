@@ -260,17 +260,13 @@ h2 {
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
 }
 
-.gallery-container img:hover {
+.gallery-item:hover img {
   transform: scale(1.08);
   box-shadow: 0 12px 34px #111a, 0 2px 18px #000c;
 }
 
 .gallery-container img.wide {
   grid-column: span 2;
-}
-
-.gallery-item {
-  position: relative;
 }
 
 .gallery-title {
