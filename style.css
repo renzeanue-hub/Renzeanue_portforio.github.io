@@ -370,7 +370,7 @@ footer {
    スマホ用
 ===================== */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .name-header  {
   font-size: 2.2em;
   font-weight: bold;
