@@ -99,6 +99,8 @@ header {
 
 .profile-row h1 {
   margin-bottom: 0.1em;
+  border-radius: 50px 50px 0 0;
+
 }
 
 /* 名前＋アイコン横並び */
