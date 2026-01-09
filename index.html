@@ -10,8 +10,16 @@
   <!-- ↓↓↓ base を先に書く！ ↓↓↓ -->
   <base href="/Renzeanue_portforio.github.io/">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loding.css">
 </head>
+
 <body>
+<!-- ロード画面 -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
   <header id="top">
 <!-- スライダー部分 -->
   <div class="header-slider">
@@ -143,8 +151,9 @@
     </section>
   </main>
   <footer>
-    <p>&copy; Renzenanue`s Illustration Portfolio</p>
+    <p>&copy;Illustration Portfolio</p>
   </footer>
+  <script src="loding.js"></script>
   <script>
     const imgs = document.querySelectorAll('.header-slider .slider-img');
     const prevBtn = document.querySelector('.header-slider .slider-area.prev');
