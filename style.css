@@ -82,6 +82,13 @@ header {
 }
 
 /* サブタイトル(Renzeanue) */
+.name-header  {
+  font-size: 4.4em;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
 .subtitle {
   text-align: center;
   font-size: 0.9em;
@@ -221,7 +228,7 @@ h2 {
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(6px, 2.0vw, 20px); /* 最小12px、最大20px、基本2.5vw */
+  gap: clamp(6px, 2.5vw, 20px); /* 最小12px、最大20px、基本2.5vw */
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
@@ -230,7 +237,7 @@ h2 {
 
 /* ギャラリーアイテム */
 .gallery-item {
-  width: calc(50% - clamp(3px, 1.0vw, 10px)); /* gap の半分 */
+  width: calc(50% - clamp(3px, 1.25vw, 10px)); /* gap の半分 */
   display: block;
   position: relative;
   transition:
@@ -255,7 +262,7 @@ h2 {
 }
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-  padding-bottom: 50px;
+  padding-bottom: 55px;
 }
 
 .gallery-item:hover img {
