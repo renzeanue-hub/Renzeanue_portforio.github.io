@@ -82,7 +82,7 @@ header {
 }
 
 /* サブタイトル(Renzeanue) */
-.name-header  {
+.name-header {
   font-size: 4.4em;
   font-weight: bold;
   margin-bottom: 6px;
@@ -99,7 +99,6 @@ header {
 
 .profile-row h1 {
   margin-bottom: 0.1em;
-  border-radius: 50px 50px 0 0;
 
 }
 
@@ -111,6 +110,7 @@ header {
   justify-content: center;
   gap: 22px;
   margin-bottom: 18px;
+  border-radius: 50px 50px 0 0;
 }
 
 .profile-icon {
