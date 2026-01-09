@@ -78,6 +78,7 @@ header {
   text-align: center;
   box-shadow: 0 4px 20px #0006;
   position: relative;
+  padding-bottom: 32px;
   /* margin-top: 70px; ナビの分下げる */
 }
 
@@ -103,6 +104,16 @@ header {
 }
 
 /* 名前＋アイコン横並び */
+/* .profile-row {
+  font-size: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 18px;
+  border-radius: 50px 50px 0 0;
+} */
+
 .profile-row {
   font-size: 1.6em;
   display: flex;
@@ -111,6 +122,15 @@ header {
   gap: 22px;
   margin-bottom: 18px;
   border-radius: 50px 50px 0 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px); /* X:中央 Y:画像にかぶせる */
+  top: 100%;   /* ヘッダー画像の直後に配置 */
+  background: #232323ee;    /* 浮いた感出す。透明度/blur好みで */
+  box-shadow: 0 6px 32px #0007, 0 2px 8px #0009;
+  padding: 24px 42px 24px 32px;
+  z-index: 100;
+  /* 動き → 固定しない。そのまま内包divとして流れる */
 }
 
 .profile-icon {
