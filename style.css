@@ -86,7 +86,7 @@ header {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4:3;
   margin-left: -50vw;
   left: 50%;
   /*overflow: hidden;*/
@@ -141,7 +141,6 @@ header {
    プロフィールロー
 ===================== */
 .profile-row {
-  font-size: 1.6em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,12 +161,11 @@ header {
   border-radius: 50%;
   border: 3px solid #444;
   object-fit: cover;
-  box-shadow: 0 0 0 6px #191919;
 }
 
 .name {
-  font-size: 2.2em;
-  font-weight: bold;
+  font-size: 1.2em;
+  /*font-weight: bold;*/
   margin-bottom: 6px;
   letter-spacing: 0.05em;
 }
@@ -390,8 +388,8 @@ footer {
 ===================== */
 @media (max-width: 750px) {
   .name {
-    font-size 1.2em;
-    font-weight: bold;
+    font-size: 1.0em;
+    /*font-weight: bold;*/
     margin-bottom: 6px;
     letter-spacing: 0.05em;
   }
