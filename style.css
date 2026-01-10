@@ -402,23 +402,6 @@ footer {
     font-size: 14px;
   }
 
-  header {
-    margin-top: 60px;
-  }
-
-  .header-slider {
-    aspect-ratio: 2.4 / 1;
-  }
-
-  .slider-title {
-    font-size: clamp(1.1rem, 6vw, 2.2rem);
-    padding: 2vw;
-  }
-
-  .slider-area {
-    min-width: 40px;
-    width: 17vw;
-  }
 
   .gallery-item {
     width: 100%;
