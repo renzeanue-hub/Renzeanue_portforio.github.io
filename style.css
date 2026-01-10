@@ -89,10 +89,10 @@ header {
   aspect-ratio: 3/2;
   margin-left: -50vw;
   left: 50%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: #191919;
   z-index: 1;
-  margin-bottom: -60px; /* profile-rowが被さる分 */
+  margin-bottom: -20px; /* profile-rowが被さる分 */
 }
 
 .header-slider img {
@@ -100,7 +100,7 @@ header {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /*object-fit: cover;*/
   opacity: 0;
   transition: opacity 0.8s cubic-bezier(.77,0,.18,1);
   z-index: 1;
