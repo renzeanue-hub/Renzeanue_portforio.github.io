@@ -288,8 +288,8 @@ h2 {
 
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-  padding-bottom: 5vw+30px;
-  z-index: 50;
+　padding-bottom: calc(5vw + 30px);
+  z-index: 30;
 }
 
 .gallery-item:hover img {
@@ -310,7 +310,7 @@ h2 {
   transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   text-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
   white-space: normal;
-  z-index: 30;
+  z-index: 40;
 }
 
 .gallery-title .gallery-description {
