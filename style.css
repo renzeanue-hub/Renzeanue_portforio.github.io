@@ -288,7 +288,7 @@ h2 {
 
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-  padding-bottom: 5vw;
+  padding-bottom: 5vw+30px;
   z-index: 50;
 }
 
