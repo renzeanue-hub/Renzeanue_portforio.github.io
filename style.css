@@ -86,15 +86,16 @@ header {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  /* height: 60vh; */
-  aspect-ratio: 4:3;
+  aspect-ratio: 4 / 3;
+  display: block; /* ← これが重要 */
   margin-left: -50vw;
   left: 50%;
   overflow: hidden;
   background: #191919;
   z-index: 1;
-  margin-bottom: -20px; /* profile-rowが被さる分 */
+  margin-bottom: -20px;
 }
+
 
 .header-slider img {
   position: absolute;
