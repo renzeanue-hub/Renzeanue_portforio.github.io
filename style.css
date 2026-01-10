@@ -93,7 +93,7 @@ header {
   overflow: hidden;
   background: #191919;
   z-index: 1;
-　margin-top: 60px; /* ← ナビの高さ
+  margin-top: 60px; 
 }
 
 
@@ -288,7 +288,7 @@ h2 {
 
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-　padding-bottom: calc(5vh + 30px);
+  padding-bottom: calc(5vh + 30px);
   /* padding-bottom:5vw; */
   z-index: 30;
 }
