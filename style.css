@@ -86,7 +86,7 @@ header {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  height: 60vh;
+  /* height: 60vh; */
   aspect-ratio: 4:3;
   margin-left: -50vw;
   left: 50%;
