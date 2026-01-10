@@ -140,7 +140,7 @@ header {
 }
 
 /* =====================
-   プロフィールロー
+   プロフィール
 ===================== */
 .profile-row {
   display: flex;
@@ -150,7 +150,7 @@ header {
   gap: 22px;
   background: #232323;
   box-shadow: 0 6px 32px #0007;
-  padding: 40px 20px 30px;
+  padding: 20px 10px 20px;
   position: relative;
   z-index: 10;
   width: 100%;
