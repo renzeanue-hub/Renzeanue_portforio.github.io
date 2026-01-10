@@ -90,8 +90,6 @@ header {
   margin: 0 auto;
   aspect-ratio: 4 / 3;
   display: block; /* ← これが重要 */
-  margin-left: -50vw;
-  left: 50%;
   overflow: hidden;
   background: #191919;
   z-index: 1;
