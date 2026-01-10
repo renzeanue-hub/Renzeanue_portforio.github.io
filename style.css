@@ -74,6 +74,7 @@ body {
 header {
   background: #232323;
   color: #fff;
+  margin: 0 auto;   
   text-align: center;
   position: relative;
   padding-bottom: 0;
