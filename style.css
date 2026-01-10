@@ -144,6 +144,7 @@ header {
 ===================== */
 .profile-row {
   display: flex;
+margin: 0 auto;
   align-items: center;
   justify-content: center;
   gap: 22px;
@@ -153,7 +154,7 @@ header {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1000px;
+  max-width: 80vw;
   border-radius: 50px 50px 0 0;
   margin-bottom: 0;
 }
@@ -189,7 +190,7 @@ header {
    メインコンテンツ
 ===================== */
 main {
-  max-width: 1000px;
+  max-width: 80vw;
   margin: 0 auto;
   padding: 0 20px;
   background: #232323;
@@ -396,6 +397,13 @@ footer {
     margin-bottom: 6px;
     letter-spacing: 0.05em;
   }
+   .profile-icon {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     border: 3px solid #444;
+     object-fit: cover;
+   }
 
   .main-nav ul {
     gap: 20px;
