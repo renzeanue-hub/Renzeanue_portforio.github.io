@@ -119,7 +119,7 @@ header {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 20vw;
+  width: 10vw;
   min-width: 70px;
   z-index: 10;
   cursor: pointer;
@@ -288,8 +288,8 @@ h2 {
 
 .gallery-item:hover {
   transform: scale(1.08) rotate(-1deg);
-　/* padding-bottom: calc(5vw + 30px); */
-  padding-bottom:5vw;
+　padding-bottom: calc(5vh + 30px);
+  /* padding-bottom:5vw; */
   z-index: 30;
 }
 
