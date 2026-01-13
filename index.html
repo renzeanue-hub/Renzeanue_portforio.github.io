@@ -63,39 +63,39 @@
       <div class="gallery-container">
         <div class="gallery-item" data-category="fanart">
           <img src="images/CHINO_Memoria.jpg" alt="ギャラリー1">
-          <div class="gallery-title">Memoria<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7</span></div>
+          <div class="gallery-title">Memoria<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Neffy_EyesOnMe.jpg" alt="ギャラリー1">
-          <div class="gallery-title">Eyes On Me<br><span class="gallery-description">NEFFY(VALIS) Fanart 2025/11</span></div>
+          <div class="gallery-title">Eyes On Me<br><span class="gallery-description">NEFFY(VALIS) Fanart 2025/11 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Rara_JUICE.jpg" alt="ギャラリー1">
-          <div class="gallery-title">JUICE<br><span class="gallery-description">RARA(VALIS) Fanart 2025/5</span></div>
+          <div class="gallery-title">JUICE<br><span class="gallery-description">RARA(VALIS) Fanart 2025/5 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Vitte_BlackSwan.jpg" alt="ギャラリー6">
-          <div class="gallery-title">βlack Swan<br><span class="gallery-description">VITTE(VALIS) Fanart 2025/6</span></div>
+          <div class="gallery-title">βlack Swan<br><span class="gallery-description">VITTE(VALIS) Fanart 2025/6 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/VALIS_Summer.jpg" alt="ギャラリー3">
-          <div class="gallery-title">Hot Girls Summer!!<br><span class="gallery-description">VALIS Fanart 2025/9</span></div>
+          <div class="gallery-title">Hot Girls Summer!!<br><span class="gallery-description">VALIS Fanart 2025/9 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/VALIS_flowers.jpg" alt="ギャラリー7">
-          <div class="gallery-title">Flowers of blessing<br><span class="gallery-description">VALIS Fanart 2025/12</span></div>
+          <div class="gallery-title">Flowers of blessing<br><span class="gallery-description">VALIS Fanart 2025/12 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Rara_moment.jpg" alt="ギャラリー4">
-          <div class="gallery-title">This moment!<br><span class="gallery-description">RARA(VALIS) Fanart 2025/8</span></div>
+          <div class="gallery-title">This moment!<br><span class="gallery-description">RARA(VALIS) Fanart 2025/8 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Myu_Carmen.jpg" alt="ギャラリー5">
-          <div class="gallery-title">Fatal Scarlet<br><span class="gallery-description">MYU(VALIS) Fanart 2025/7</span></div>
+          <div class="gallery-title">Fatal Scarlet<br><span class="gallery-description">MYU(VALIS) Fanart 2025/7 <button class="gallery-more">more</button></span></div>
         </div>
         <div class="gallery-item" data-category="fanart">
           <img src="images/Chino_prince.png" alt="ギャラリー1">
-          <div class="gallery-title">Starry Sky Noble<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7</span></div>
+          <div class="gallery-title">Starry Sky Noble<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7 <button class="gallery-more">more</button></span></div>
         </div>
 
         <!-- ここにoriginal, worksカテゴリの画像を追加してください。例：
@@ -121,7 +121,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <br>
-      <p>ご依頼・お問い合わせはXのDMまたは下記メールアドレスまでお願いいたします。</p>
+      ご依頼・お問い合わせはXのDMまたは下記メールアドレスまでお願いいたします。<br>
       <p>X: <a href="https://twitter.com/Renzeanue_10" target="_blank">@Renzeanue_10</a></p>
       <p>Mail: <a href="mailto:renzeanue@gmail.com">renzeanue@gmail.com</a></p><br>
       個人様のご依頼はskebからも受け付けております。<br>
@@ -198,6 +198,14 @@
             item.setAttribute('hidden', '');
           }
         });
+      });
+    });
+  //====Garallery more button====
+    document.querySelectorAll('.gallery-more').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation(); // 親要素のイベント伝播を止める
+        const imageId = btn.closest('.gallery-item').dataset.imageId;
+        window.location.href = `detail.html?id=${imageId}`;
       });
     });
   </script>
