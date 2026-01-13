@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Renzeanue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- ↓↓↓ base を先に書く！ ↓↓↓ -->
+  <base href="/Renzeanue_portforio.github.io/">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loding.css">
+</head>
+
+<body>
+<!-- ロード画面 -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+    <!-- ナビゲーション -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#top">Top</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">Profile</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="detail-container">
+    <img id="detail-image" src="" alt="" class="detail-image">
+    <h2 id="detail-title" class="detail-title"></h2>
+    <p id="detail-description" class="detail-description"></p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy;Illustration Portfolio</p>
+  </footer>
+  <script src="loding.js"></script>
+  <script>
+    function getImageIdFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("id");
+    }
+    // ギャラリーの詳細ページ用スクリプト
+    const imageId = getImageIdFromUrl();
+    const imgData = galleryData.find(item => item.id === imageId);
+
+    if (imgData) {
+    document.getElementById('detail-image').src = imgData.src;
+    document.getElementById('detail-title').textContent = imgData.title;
+    document.getElementById('detail-description').textContent = imgData.description;
+    }
+  </script>
+</body>
+</html>
