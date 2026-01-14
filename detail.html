@@ -31,9 +31,10 @@
   </nav>
   <main>
     <div class="detail-container">
-    <img id="detail-image" src="" alt="" class="detail-image">
-    <h2 id="detail-title" class="detail-title"></h2>
-    <p id="detail-description" class="detail-description"></p>
+    <img id="image" src="" alt="" class="detail-image">
+    <h2 id="title" class="detail-title"></h2>
+    <p id="description" class="detail-description1"></p>
+    <p id="detail_description" class="detail-description2"></p>
     </div>
   </main>
   <footer>
@@ -51,9 +52,10 @@
     const imgData = galleryData.find(item => item.id === imageId);
 
     if (imgData) {
-    document.getElementById('detail-image').src = imgData.src;
-    document.getElementById('detail-title').textContent = imgData.title;
-    document.getElementById('detail-description').textContent = imgData.description;
+    document.getElementById('image').src = imgData.src;
+    document.getElementById('title').textContent = imgData.title;
+    document.getElementById('description').textContent = imgData.description;
+    document.getElementById('detail_description').textContent = imgData.detail_description;
     }
   </script>
 </body>
