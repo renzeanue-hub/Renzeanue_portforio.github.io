@@ -434,9 +434,9 @@ footer {
   margin-bottom: 18px;
 }
 .detail-title {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 0.4em;
-  color: #ec407a;
+  color: #fff;
   text-align: center;
 }
 .detail-description1 {
@@ -457,7 +457,7 @@ footer {
   padding: 0;
   max-width: 100vw;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 
