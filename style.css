@@ -464,7 +464,7 @@ footer {
   align-items: center;
   justify-content: flex-start;
   width: fit-content;
-  margin: 0 0 18px 0;        /* 下に隙間、左詰め。中央にしたいならmargin: 0 auto 18px auto; */
+  margin: 20px 0 15px 0;        /* 下に隙間、左詰め。中央にしたいならmargin: 0 auto 18px auto; */
   cursor: pointer;
   text-decoration: none;
 }
