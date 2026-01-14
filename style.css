@@ -459,7 +459,28 @@ footer {
   margin: 0 auto;
   margin-top: 60px;
 }
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  margin: 0 0 18px 0;        /* 下に隙間、左詰め。中央にしたいならmargin: 0 auto 18px auto; */
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.back-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px #0008);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.back-btn:hover .back-icon {
+  filter: drop-shadow(0 4px 16px #ec407a88);
+  transform: scale(1.12) rotate(-8deg);
+}
 
 /* =====================
    スマホ用
