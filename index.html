@@ -61,53 +61,7 @@
       </div>
 
       <div class="gallery-container">
-        <div class="gallery-item" data-category="fanart" data-image-id="chino_memoria">
-          <img src="images/CHINO_Memoria.jpg" alt="ギャラリー1">
-          <div class="gallery-title">Memoria<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="neffy_eyesonme">
-          <img src="images/Neffy_EyesOnMe.jpg" alt="ギャラリー1">
-          <div class="gallery-title">Eyes On Me<br><span class="gallery-description">NEFFY(VALIS) Fanart 2025/11<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="rara_juice">
-          <img src="images/Rara_JUICE.jpg" alt="ギャラリー1">
-          <div class="gallery-title">JUICE<br><span class="gallery-description">RARA(VALIS) Fanart 2025/5<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="vitte_blackswan">
-          <img src="images/Vitte_BlackSwan.jpg" alt="ギャラリー6">
-          <div class="gallery-title">βlack Swan<br><span class="gallery-description">VITTE(VALIS) Fanart 2025/6<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="valis_summer">
-          <img src="images/VALIS_Summer.jpg" alt="ギャラリー3">
-          <div class="gallery-title">Hot Girls Summer!!<br><span class="gallery-description">VALIS Fanart 2025/9<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="valis_flowers">
-          <img src="images/VALIS_flowers.jpg" alt="ギャラリー7">
-          <div class="gallery-title">Flowers of blessing<br><span class="gallery-description">VALIS Fanart 2025/12<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="rara_moment">
-          <img src="images/Rara_moment.jpg" alt="ギャラリー4">
-          <div class="gallery-title">This moment!<br><span class="gallery-description">RARA(VALIS) Fanart 2025/8<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="myu_carmen">
-          <img src="images/Myu_Carmen.jpg" alt="ギャラリー5">
-          <div class="gallery-title">Fatal Scarlet<br><span class="gallery-description">MYU(VALIS) Fanart 2025/7<button class="gallery-more">more</button></span></div>
-        </div>
-        <div class="gallery-item" data-category="fanart" data-image-id="chino_prince">
-          <img src="images/Chino_prince.png" alt="ギャラリー1">
-          <div class="gallery-title">Starry Sky Noble<br><span class="gallery-description">CHINO(VALIS) Fanart 2025/7<button class="gallery-more">more</button></span></div>
-        </div>
-
-        <!-- ここにoriginal, worksカテゴリの画像を追加してください。例：
-        <div class="gallery-item" data-category="original"> 
-          <img src="images/original_sample.jpg" alt="オリジナル1">
-          <div class="gallery-title">オリジナル作品タイトル</div>
-        </div>
-        <div class="gallery-item" data-category="works">
-          <img src="images/works_sample.jpg" alt="ワークス1">
-          <div class="gallery-title">お仕事作品タイトル</div>
-        </div>
-        -->
+        <!-- ギャラリーアイテムがここに挿入される -->
       </div>
     </section>
     <section id="about">
@@ -200,6 +154,21 @@
         });
       });
     });
+    // ギャラリーの情報
+    const container = document.querySelector('.gallery-container');
+    galleryData.forEach(item => {
+      container.insertAdjacentHTML('beforeend', `
+        <div class="gallery-item" data-category="${item.category}" data-image-id="${item.id}">
+          <img src="${item.src}" alt="${item.title}">
+          <div class="gallery-title">${item.title}<br>
+            <span class="gallery-description">${item.description}
+              <button class="gallery-more">more</button>
+            </span>
+          </div>
+        </div>
+      `);
+    });
+
   //====Garallery more button====
     document.querySelectorAll('.gallery-more').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -208,6 +177,8 @@
         window.location.href = `detail.html?id=${imageId}`;
       });
     });
+
+  
   </script>
 </body>
 </html>
