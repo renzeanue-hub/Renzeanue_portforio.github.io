@@ -439,7 +439,14 @@ footer {
   color: #ec407a;
   text-align: center;
 }
-.detail-description {
+.detail-description1 {
+  font-size: 1em;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.detail-description2 {
   font-size: 1em;
   color: #fff;
   opacity: 0.8;
