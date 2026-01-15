@@ -160,7 +160,7 @@
     galleryData.forEach(item => {
       container.insertAdjacentHTML('beforeend', `
         <div class="gallery-item" data-category="${item.category}" data-image-id="${item.id}">
-          <img src="${item.src}" alt="${item.title}">
+          <img src="${item.thumbnail}" alt="${item.title}">
           <div class="gallery-title">${item.title}<br>
             <span class="gallery-description">${item.description}
               <button class="gallery-more">more</button>
