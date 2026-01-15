@@ -37,7 +37,7 @@
   },
   {
     id: "chino_prince",
-    thumbnail: "images/thumbnail/Chino_prince_thumbnail.png",
+    thumbnail: "images/thumbnail/Chino_prince_thumbnail.jpg",
     src: "images/Chino_prince.png",
     title: "Starry Sky Noble",
     category: "fanart",
